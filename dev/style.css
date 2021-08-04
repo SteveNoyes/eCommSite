@@ -1,0 +1,43 @@
+
+/* color */
+:root {
+--neoPink: #f72585;
+--neoPinkPurp: #b5179e;
+--neoPurpLite: #7209b7;
+--neoPurpMid: #560bad;
+--neoPurpDark: #480ca8;
+--neoPurp: #3a0ca3;
+--neoPurpBlu: #3f37c9;
+--neoBlu: #4361ee;
+--neoBluLite: #4895ef;
+--neoTeal: #4cc9f0;
+}
+
+/* Global */
+
+/* Fonts */
+
+h1 {
+  font-size: 2em;
+}
+
+p {
+  font-size: 1.5em;
+}
+
+/* Utility */
+
+.test {
+  text-align: center;
+  padding: 2em 0 2em;
+  border: 2px solid black;
+  border-radius: 0 0 6px 6px;
+  background-color: var(--neoPink);
+  color: white;
+}
+
+.grph-wrap {
+  width: 70%;
+  margin: auto;
+  padding: 2em 0 2em;
+}
