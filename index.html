@@ -14,22 +14,32 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" href="/dist/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="/dev/style.css">
   <title>Nostalgia</title>
 </head>
 <body>
 
-  <div class="test">
-    <h1>Nostalgia</h1>
-  </div>
-  <div class="grph-wrap">
-    <p id="grph"></p>
+  <!-- Nav Bar -->
+  <div class="topnav" id="myTopnav">
+    <img alt="Nostalgia Logo" src="/images/logo-200x200.png" height="50px">
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 
+
+
+  <!-- Hero Image -->
+
+  <div class="hero"></div>
 
 
   <!-- Contact Form -->
-  <form method="post" class="contactForm" name="contact_form"
+  <!-- <form method="post" class="contactForm" name="contact_form"
 action="contact.php">
     <label for="name">Name:</label>
     <input type="text" class="nameInput" name="name" placeholder="name" required>
@@ -42,8 +52,10 @@ action="contact.php">
     <textarea name="message" class="messageInput" required></textarea>
     <br>
     <input type="submit" name="submit" class="btn" value="Submit">
-  </form>
+  </form> -->
   <!-- Contact Form End-->
+
+
   <script src="/dev/script.js" charset="utf-8"></script>
 </body>
 </html>
