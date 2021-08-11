@@ -1,8 +1,18 @@
-function toggleNav() {
-  var x = document.getElementById("myTopnav");
-  if (x.className === "topnav") {
-    x.className += " responsive";
-  } else {
-    x.className = "topnav";
-  }
-}
+/*
+  Title
+  Info
+  Structure
+*/
+
+
+// Navbar
+
+const navbar = document.querySelector(".navbar");
+const menuToggle = document.querySelector(".menu-toggle");
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("open");
+});
+
+
+
+// Hero

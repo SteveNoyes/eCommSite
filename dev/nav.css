@@ -1,0 +1,159 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(
+    135deg,
+    var(--neoPink),
+    var(--neoPinkPurp),
+    var(--neoPurpLite),
+    var(--neoPurpMid),
+    var(--neoPurpDark),
+    var(--neoPurp),
+    var(--neoPurpBlu),
+    var(--neoBluLite),
+    var(--neoTeal));
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nostalgiaLogo {
+  height: 80px;
+  margin-top: 7px;
+  padding: 0;
+}
+
+.nav-list {
+  list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40vh;
+  background-color: #222222;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  z-index: 1250;
+  transform: translateY(-100%);
+  transition: transform 0.5s;
+}
+
+
+.nav-link {
+  color: var(--neoTeal);
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: var(--neoBluLite);
+}
+
+ .active {
+  font-weight: 700;
+}
+
+.nav-item {
+  padding-bottom: 2em;
+}
+
+.open .nav-list {
+  transform: translateX(0);
+}
+
+.menu-toggle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3.2rem;
+  height: 3.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.hamburger {
+  width: 2.4rem;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: none;
+  transition: all 0.7s ease-out;
+  z-index: 1251;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 2.4rem;
+  height: 3px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  border: none;
+  z-index: 1251;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+  z-index: 1251;
+}
+
+.hamburger::after {
+  transform: translateY(8px);
+  z-index: 1251;
+}
+
+/* Toggle */
+
+.open .hamburger {
+  background: transparent;
+}
+
+.open .hamburger::before {
+  transform-origin: (0, 0);
+  transform: rotate(45deg);
+}
+
+.open .hamburger::after {
+  transform-origin: (0, 0);
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .nav-list {
+    position: initial;
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    padding: 0;
+    justify-content: initial;
+    flex-direction: row;
+    transform: initial;
+    transition: initial;
+    padding-top: 1.6em;
+  }
+  .nav-link {
+    margin-left: 1em;
+    font-size: 1.5rem;
+    transition: all 0.1s;
+    color: #ffffff;
+  }
+
+  .nav-link:last-child {
+    margin-right: .8em;
+  }
+
+  .nav-link:hover {
+    color: 	rgba(248,248,255, 0.7);
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+}

@@ -13,48 +13,101 @@
   <link rel="mask-icon" href="/favicon.ico/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/dist/reset.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- CSS LINKS TO BE CONCAT -->
+  <link rel="stylesheet" href="/dev/nav.css">
   <link rel="stylesheet" href="/dev/style.css">
   <title>Nostalgia</title>
 </head>
 <body>
 
   <!-- Nav Bar -->
-  <div class="topnav" id="myTopnav">
-    <img alt="Nostalgia Logo" src="/images/logo-200x200.png" height="50px">
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-    <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
-      <i class="fa fa-bars"></i>
-    </a>
+  <nav class="navbar">
+    <h1 class="navbar-brand">
+      <img src="./images/logo-200x200.png" alt="Nostalgia brand logo" class="nostalgiaLogo">
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">
+          home
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          about
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+           camaras
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          typewriters
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          order
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">
+          contact
+        </a>
+      </li>
+    </ul>
+    <div class="menu-toggle">
+      <div class="hamburger">
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Hero Section -->
+
+
+
+
+  <!-- About -->
+
+  <div class="about">
+    <img src="./images/camaras/acc-0-min.jpg" alt="Old accordian camara open" class="heroImg">
+    <p><span class="firstGraphLetter">H</span>ere at Nostalgia we believe in holding on to the past. Maybe dust it off a little, and paint over the messy parts. I started collecting over 20 years ago. Now I want to share my collection and creations to try and keep a part of our past alive.</p>
   </div>
 
 
 
-  <!-- Hero Image -->
-
-  <div class="hero"></div>
 
 
-  <!-- Contact Form -->
-  <!-- <form method="post" class="contactForm" name="contact_form"
-action="contact.php">
-    <label for="name">Name:</label>
-    <input type="text" class="nameInput" name="name" placeholder="name" required>
-    <br>
-    <label for="email">Email:</label>
-    <input type="text" class="emailInput" name="email" required pattern="(.+)@(.+){1,}\.(.+){2,}" placeholder="email@mail.com">
-    <br>
-    <label for="message">Message:</label>
-    <br>
-    <textarea name="message" class="messageInput" required></textarea>
-    <br>
-    <input type="submit" name="submit" class="btn" value="Submit">
-  </form> -->
-  <!-- Contact Form End-->
-
+  <footer>
+    <!-- Contact Form -->
+    <div class="contactWrap">
+      <form method="post" class="contactForm" name="contact_form"
+    action="contact.php">
+        <label for="name">Name:</label>
+        <input type="text" class="nameInput" name="name" placeholder="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="text" class="emailInput" name="email" required pattern="(.+)@(.+){1,}\.(.+){2,}" placeholder="email@mail.com">
+        <br>
+        <label for="message">Message:</label>
+        <br>
+        <textarea name="message" class="messageInput" required></textarea>
+        <br>
+        <input type="submit" name="submit" class="btn" value="Submit">
+      </form>
+    </div> <!-- Contact Form End-->
+    <div class="copyright">
+      <p>ADM &copy 2021</p>
+    </div>
+  </footer>
 
   <script src="/dev/script.js" charset="utf-8"></script>
 </body>
