@@ -1,3 +1,20 @@
+/* reused styles */
+@keyframes slide {
+	 0% {
+		 background-position-x: 0%;
+	}
+	 100% {
+		 background-position-x: 600vw;
+	}
+}
+.repeatLinGrad:hover {
+	 background: repeating-linear-gradient(-45deg, #f72585 0%, #b5179e 7.14%, #560bad 14.28%, #480ca8 21.42%, #3a0ca3 28.56%, #3f37c9 35.7%, #4361ee 42.84%, #4cc9f0 50%);
+	 background-size: 600vw 600vw;
+	 -webkit-animation: 'slide' 20s infinite linear forwards;
+	 animation-duration: 2.5s;
+   color: white;
+	 cursor: pointer;
+}
 
 /* color */
 :root {
@@ -20,28 +37,193 @@ body {
   font-family: 'Atkinson Hyperlegible', sans-serif, monospace;
 }
 
-/* Fonts */
-
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: 700;
 }
 
 p {
-  font-size: 1.5em;
+  font-size: 1em;
   font-weight: 400;
 }
 
 /* Utilities */
 
-/* Hero */
+.wrapper {
+  display: block;
+}
 
+/* Hero Slider */
+
+
+.slider {
+	position: relative;
+	height: 200px;
+	width: 90%;
+  margin: 5em auto 2em;
+}
+.slider li {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	transition: clip .7s ease-in-out, z-index 0s .7s;
+	clip: rect(0, 100vw, 100vh, 100vw);
+	display: table;
+}
+.center-y {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	color: #fff;
+}
+.sliderTitle {
+	font-size: 5rem;
+	font-style: italic;
+}
+.sliderTitle + a {
+	font-size: 1.6rem;
+	display: inline-block;
+	color: #fff;
+	margin-top: 2rem;
+}
+.sliderTitle, .sliderTitle + a {
+	opacity: 0;
+	transition: opacity .7s 0s, transform .5s .2s;
+	transform: translate3d(0, 50%, 0);
+}
+ .slider li.current .sliderTitle, .slider li.current .sliderTitle + a {
+	opacity: 1;
+	transition-delay: 1s;
+	transform: translate3d(0, 0, 0);
+}
+.slider li.current {
+	z-index: 1;
+	clip: rect(0, 100vw, 100vh, 0);
+}
+.slider li.prev {
+	clip: rect(0, 0, 100vh, 0);
+}
+.slider nav {
+	position: absolute;
+	text-align: center;
+	z-index: 2000;
+  background-color: black;
+}
+.heroNav a {
+	display: inline-block;
+	border-radius: 50%;
+	width: 1.2rem;
+	height: 1.2rem;
+  min-width: 12px;
+  min-height: 12px;
+	background: green;
+	margin: 0 1rem;
+  transition: transform .3s;
+}
+.slider a.current_dot {
+	transform: scale(1.4);
+}
+
+/* Hero Slider End */
+
+.heroButton {
+  width: 100%;
+  padding: 2em;
+  margin: 4em 0 4em;
+}
 
 /* About */
 
 .about {
   height: 100vh;
 }
+
+.aboutGraph {
+  padding-top:
+}
+
+/* Products */
+
+.productCardWrapper {
+	width: 90%;
+	max-width: 1240px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	grid-gap: 20px;
+}
+@media (min-width: 30em) {
+	.productCardWrapper {
+		grid-template-columns: 1fr 1fr;
+ }
+}
+@media (min-width: 60em) {
+	.productCardWrapper {
+		grid-template-columns: repeat(4, 1fr);
+ }
+}
+.productCard {
+	background: white;
+	text-decoration: none;
+	color: #444;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	position: relative;
+	top: 0;
+	transition: all 0.1s ease-in;
+}
+.productCard:hover {
+	top: -2px;
+	box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+.productCard article {
+	padding: 20px;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.productCard h1 {
+	font-size: 20px;
+	margin: 0;
+	color: #333;
+}
+.productCard p {
+	flex: 1;
+	line-height: 1.4;
+}
+.productCard span {
+	font-size: 12px;
+	font-weight: bold;
+	color: #999;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	margin: 2em 0 0 0;
+}
+.productCard .thumb {
+	padding-bottom: 60%;
+	background-size: cover;
+	background-position: center center;
+}
+@media (min-width: 60em) {
+	.item-1 {
+		grid-column: 1 / span 2;
+ }
+	.item-1 h1 {
+		font-size: 24px;
+ }
+}
+
+
+/* Products Ends */
 
 /* Contact */
 
@@ -58,12 +240,6 @@ p {
   text-align: center;
   margin-top: 2em;
   color: #ffffff;
-}
-
-
-/* About */
-.about {
-  height: 100vh;
 }
 
 /* Footer */
