@@ -28,6 +28,12 @@
 --neoBlu: #4361ee;
 --neoBluLite: #4895ef;
 --neoTeal: #4cc9f0;
+
+
+/* set colors */
+--white: white;
+--red: red;
+--blue: blue;
 --light-gray: rgba(217, 218, 221, 0.5);
 }
 
